@@ -1,17 +1,16 @@
 class: middle, center, title-slide
 count: false
 
-# Talk Template
-Subtitle of talk
-
+# pyhf
 <br>
 
+(for the dev team)<br>
 Matthew Feickert<br>
 [matthew.feickert@cern.ch](mailto:matthew.feickert@cern.ch)
 
-[Talk Event Name](https://talk-event-url)
+[PyHEP 2019](https://indico.cern.ch/event/833895/contributions/3577824/)
 
-Month DDth, Year
+October 18th, 2019
 
 ---
 # Collaborators
