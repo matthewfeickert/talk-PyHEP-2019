@@ -230,6 +230,16 @@ Until now, the only implementation of HistFactory has been in RooStats+RooFit
 .center.width-100[![stream_HEPData](figures/carbon_stream_HEPData.png)]
 
 ---
+# ROOT + XML to JSON and back
+
+.center.width-100[![flowchart](figures/process.png)]
+
+---
+# Best-fit parameter values
+
+.center.width-90[![fit_results](figures/fit_results.png)]
+
+---
 # Likelihood serialization and reproduction
 <!--  -->
 - ATLAS PUB note on the JSON schema for serialization and reproduction of results ([ATL-PHYS-PUB-2019-029](https://cds.cern.ch/record/2684863))
@@ -270,16 +280,6 @@ Through pyhf are able to provide:
 class: end-slide, center
 
 Backup
-
----
-# ROOT + XML to JSON and back
-
-.center.width-100[![flowchart](figures/process.png)]
-
----
-# Best-fit parameter values
-
-.center.width-90[![fit_results](figures/fit_results.png)]
 
 ---
 # JSON Patch files for new signal models
