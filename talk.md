@@ -1,7 +1,8 @@
 class: middle, center, title-slide
 count: false
 
-# pyhf
+# `pyhf`: pure-Python
+# implementation of HistFactory
 <br>
 
 (for the dev team)<br>
@@ -117,9 +118,10 @@ $$
 
 .bold[Main pieces:]
 - .blue[Main Poisson p.d.f. for simultaneous measurement of multiple channels]
+- .katex[Event rates] $\nu\_{cb}$ from nominal rate $\nu\_{scb}^{0}$ and rate modifiers $\kappa$ and $\Delta$
 - .red[Constraint p.d.f. (+ data) for "auxiliary measurements"]
    - encoding systematic uncertainties (normalization, shape, etc)
-- .katex[Event rates] $\nu\_{cb}$ from nominal rate $\nu\_{scb}^{0}$ and rate modifiers $\kappa$ and $\Delta$
+- $\vec{n}$: events, $\vec{a}$: auxiliary data, $\vec{\eta}$: unconstrained pars, $\vec{\chi}$: constrained pars
 
 ---
 # HistFactory Template
@@ -221,7 +223,10 @@ Until now, the only implementation of HistFactory has been in RooStats+RooFit
 - Signal models stored as JSON Patch files
 - Together are able to fully preserve the model
 
-.center.bold[Note to reviewer: Here will go a screenshot of the HEPData page but we are waiting on the SUSY conveners to upload the likelihood]
+...sadly the JSON published as part of ([ATL-PHYS-PUB-2019-029](https://cds.cern.ch/record/2684863)) is _still_ not up on HEPData. 😭 So you're going to have to use your imagination a bit.
+
+.center.width-80[![JSON_regions](figures/JSON_regions.png)]
+.center.width-80[![JSON_RegionA](figures/JSON_RegionA.png)]
 
 ---
 # ...can be streamed from HEPData
@@ -233,11 +238,6 @@ Until now, the only implementation of HistFactory has been in RooStats+RooFit
 # ROOT + XML to JSON and back
 
 .center.width-100[![flowchart](figures/process.png)]
-
----
-# Best-fit parameter values
-
-.center.width-90[![fit_results](figures/fit_results.png)]
 
 ---
 # Likelihood serialization and reproduction
@@ -254,6 +254,15 @@ Until now, the only implementation of HistFactory has been in RooStats+RooFit
 .kol-1-2.right.width-75[
 [![discrepancy](figures/discrepancy.png)](https://cds.cern.ch/record/2684863)
 ]
+
+---
+# Live demo time!
+
+<br><br>
+
+.center.bold[Just click the button!]<br><br><br>
+
+.center.width-70[[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewfeickert/talk-PyHEP-2019/master)]
 
 ---
 # Summary
@@ -280,6 +289,11 @@ Through pyhf are able to provide:
 class: end-slide, center
 
 Backup
+
+---
+# Best-fit parameter values
+
+.center.width-90[![fit_results](figures/fit_results.png)]
 
 ---
 # JSON Patch files for new signal models
