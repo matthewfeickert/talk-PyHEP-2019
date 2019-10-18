@@ -1,8 +1,8 @@
-# [Talk Summary Title](https://talk-url)
+# [pyhf](https://indico.cern.ch/event/833895/contributions/3577824/)
 
-Talk given at the [Talk Event](https://talk-event-url)
+Talk given at the [pyhf talk at the PyHEP 2019 Workshop](https://indico.cern.ch/event/833895/overview)
 
-Viewable online [here](https://matthewfeickert.github.io/talk-template/index.html?p=talk.md)
+Viewable online [here](https://matthewfeickert.github.io/talk-PyHEP-2019/index.html)
 
 ## Acknowledgments
 

@@ -1,0 +1,2 @@
+-e git+https://github.com/diana-hep/pyhf.git@toyhypotest#egg=pyhf[xmlio]
+matplotlib~=3.1
