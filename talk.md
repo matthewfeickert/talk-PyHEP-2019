@@ -221,18 +221,22 @@ Until now, the only implementation of HistFactory has been in RooStats+RooFit
 
 - Background-only model JSON stored
 - Signal models stored as JSON Patch files
-- Together are able to fully preserve the model
+- Together are able to fully preserve the full model
 
-...sadly the JSON published as part of ([ATL-PHYS-PUB-2019-029](https://cds.cern.ch/record/2684863)) is _still_ not up on HEPData. 😭 So you're going to have to use your imagination a bit.
+[.center.width-90[![HEPData_likelihoods](figures/HEPData_likelihoods.png)]](https://www.hepdata.net/record/ins1748602)
 
-.center.width-80[![JSON_regions](figures/JSON_regions.png)]
-.center.width-80[![JSON_RegionA](figures/JSON_RegionA.png)]
+.footnote[Updated on 2019-10-21]
 
 ---
 # ...can be streamed from HEPData
-<br>
 
-.center.width-100[![stream_HEPData](figures/carbon_stream_HEPData.png)]
+- Background-only model JSON stored
+- Signal models stored as JSON Patch files
+- Together are able to fully preserve the full model
+
+.center.width-100[![HEPData_streamed_likelihoods](figures/carbon_HEPData_streamed_likelihoods.png)]
+
+.footnote[Updated on 2019-10-21]
 
 ---
 # ROOT + XML to JSON and back
@@ -322,23 +326,23 @@ $ pyhf cls example.json --patch new_signal.json | jq .CLs_obs
 <br>
 
 ```
-$ curl -sL https://git.io/nominal | \
-  pyhf cls --patch <(curl -sL https://git.io/newsignal)
+# One signal model
+$ curl -sL https://bit.ly/33TVZ5p | \
+  tar -O -xzv RegionA/BkgOnly.json | \
+  pyhf cls --patch <(curl -sL https://bit.ly/33TVZ5p | \
+      tar -O -xzv RegionA/patch.sbottom_1300_205_60.json) | \
+  jq .CLs_obs
+0.24443635754482018
 ```
 
 ```
-# Nominal
-$ curl -sL https://git.io/fjxXE | \
-  pyhf cls | \
+# A different signal model
+$ curl -sL https://bit.ly/33TVZ5p | \
+  tar -O -xzv RegionA/BkgOnly.json | \
+  pyhf cls --patch <(curl -sL https://bit.ly/33TVZ5p | \
+      tar -O -xzv RegionA/patch.sbottom_1300_230_100.json) | \
   jq .CLs_obs
-0.3599845631401913
-```
-```
-# New signal
-$ curl -sL https://git.io/fjxXE | \
-  pyhf cls --patch <(curl -sL https://git.io/JeWTx) | \
-  jq .CLs_obs
-0.4764263982925686
+0.040766025813435774
 ```
 
 ---
